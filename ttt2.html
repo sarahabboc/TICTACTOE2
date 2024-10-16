@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled Document</title>
+    <style>
+        #board-3x3{
+           
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px; 
+            margin: 0 auto;
+
+
+        }
+        .square{
+            width: 90px;
+            height: 90px; 
+            background-color: violet; 
+            margin: 5px;
+
+            text-align: center;
+            font-size: 95px;
+            font-weight: bold;
+            line-height: 90px;
+
+
+        }
+        .square:hover{
+            background-color: lightpink;
+
+        }
+
+
+        #text-box{
+            text-align: center;
+            border: 2px solid #000;
+            width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+             font-size: 25px;
+        }
+
+      
+        
+
+        h1{
+            text-align: center;
+            color:red;
+            font-family: Impact;
+
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+    <h1>TIC TAC TOE</h1>
+    
+    <div id="text-box">O's turn!</div>
+    <div id= "board-3x3">
+        <script>
+
+            const NUM_SQUARES = 9;
+            for (i=0; i<NUM_SQUARES; i++)
+                { const id = "sq"+i;
+                document.write( "<div class='square' id='" + id + "'></div>" );
+                 }
+
+        </script>
+    </div>
+    <div id="text-box">Waiting for Winner...</div>
+        <script>
+             document.getElementById("sq2").innerHTML = "X";
+             document.getElementById("sq3").innerHTML = "O";
+        </script>
+    
+
+</body>
+</html>
